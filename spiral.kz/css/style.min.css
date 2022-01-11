@@ -264,7 +264,7 @@ body._lock {
   align-items: center;
   display: inline-flex;
   padding: 16px 20px;
-  min-height: 57px;
+  min-height: 64px;
   background: #CE7F54;
   border-radius: 10px;
   font-family: "Futura bold";
@@ -915,28 +915,20 @@ body.ie ._ibg img {
   height: 100%;
   z-index: -1;
 }
-.header__body {
+.header__top {
   padding-top: 38px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 @media (max-width: 1190px) {
-  .header__body {
+  .header__top {
     padding-top: calc(20px + 18 * ((100vw - 320px) / 870));
-  }
-}
-.header__logo {
-  max-width: 371px;
-  margin-right: 58px;
-}
-@media (max-width: 1190px) {
-  .header__logo {
-    margin-right: calc(20px + 38 * ((100vw - 320px) / 870));
   }
 }
 .header__online {
   margin-right: 13px;
+  height: 64px;
 }
 @media (max-width: 1190px) {
   .header__online {
@@ -978,15 +970,30 @@ body.ie ._ibg img {
 }
 .header__chart {
   width: 230px;
+  height: 64px;
+}
+
+.logotip {
+  display: flex;
+  align-items: center;
+  margin-right: 58px;
+}
+@media (max-width: 1190px) {
+  .logotip {
+    margin-right: calc(20px + 38 * ((100vw - 320px) / 870));
+  }
+}
+.logotip__logo {
+  max-width: 166px;
 }
 
 .social {
   display: flex;
-  margin-right: 50px;
+  margin-right: 40px;
 }
 @media (max-width: 1190px) {
   .social {
-    margin-right: calc(20px + 30 * ((100vw - 320px) / 870));
+    margin-right: calc(20px + 20 * ((100vw - 320px) / 870));
   }
 }
 .social-viber {
@@ -1001,6 +1008,7 @@ body.ie ._ibg img {
   border-radius: 5px;
   padding: 10px;
   width: 100px;
+  height: 64px;
   margin-right: 10px;
 }
 .social__item:last-child {
@@ -1030,13 +1038,12 @@ body.ie ._ibg img {
   font-family: "Futura bold";
   font-weight: 600;
   font-size: 12px;
-  line-height: 15px;
   color: #3E3E3E;
 }
 
 .chart {
   text-align: center;
-  padding: 12px 35px;
+  padding: 10px 35px;
   background: #FFFFFF;
   opacity: 0.6;
   border-radius: 10px;
@@ -1052,7 +1059,6 @@ body.ie ._ibg img {
   font-family: "Futura bold";
   font-weight: bold;
   font-size: 14px;
-  line-height: 18px;
   margin-bottom: 10px;
   white-space: nowrap;
 }
@@ -1060,15 +1066,19 @@ body.ie ._ibg img {
   display: block;
   font-size: 18px;
   font-weight: bold;
-  color: #3E3E3E;
+  color: #000;
   white-space: nowrap;
 }
 .chart a span {
   background: rgba(30, 30, 32, 0.1);
-  padding: 6px;
+  padding: 5px;
   border-radius: 10px;
   margin-right: 5px;
 }
+.chart-phone {
+  font-size: 14px;
+}
+
 .blink {
   animation-name: blinker;
   animation-iteration-count: infinite;
