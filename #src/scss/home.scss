@@ -20,14 +20,14 @@
 	}
 
 	&__column-location {
-		font-family: 'Futura Medium';
+		font-family: 'Futura Bold';
 		display: inline-flex;
 		align-items: center;
 		background: #FFFFFF;
 		box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
 		border-radius: 10px;
 		padding: 12px 18px;
-		font-size: 16px;
+		font-size: 18px;
 		color: #3E3E3E;
 		@include adaptiv-value("margin-bottom", 68, 40, 1);
 
@@ -49,10 +49,10 @@
 }
 
 .main-block {
-	max-width: 381px;
+	max-width: 400px;
 	background: #fff;
 	border-radius: 0 80px 0 0;
-	padding: 65px 25px 40px 25px;
+	padding: 65px 35px 40px 35px;
 }
 
 .main-block-title {
@@ -87,15 +87,6 @@
 
 .checkbox {
 	margin-bottom: 31px;
-
-	&__label {
-		font-family: 'Futura Heavy';
-		font-weight: normal;
-		font-size: 12px;
-		color: #000000;
-		display: block;
-		text-align: left;
-	}
 }
 
 .button {
