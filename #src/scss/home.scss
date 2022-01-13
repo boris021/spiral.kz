@@ -1,3 +1,129 @@
-//====================================================================================================
+.main {
+	&__body {
+		display: flex;
+		// justify-content: space-between;
+	}
 
-//====================================================================================================
+	&__column-left {
+		flex: 1 1 700px;
+	}
+
+	&__column-title {
+		font-family: 'Futura Bold';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 40px;
+		line-height: 51px;
+		text-transform: uppercase;
+		color: #FFFFFF;
+		margin-bottom: 22px;
+	}
+
+	&__column-location {
+		font-family: 'Futura Medium';
+		display: inline-flex;
+		align-items: center;
+		background: #FFFFFF;
+		box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+		padding: 12px 18px;
+		font-size: 16px;
+		color: #3E3E3E;
+		@include adaptiv-value("margin-bottom", 68, 40, 1);
+
+		& span {
+			color: #CE7F54;
+			font-size: 22px;
+			margin-right: 10px;
+		}
+	}
+
+	&__column-right {
+		display: flex;
+		justify-content: flex-end;
+		margin-right: -35px;
+		// padding-right: 35px;
+		flex: 1 1 552px;
+		z-index: 1;
+	}
+}
+
+.main-block {
+	max-width: 381px;
+	background: #fff;
+	border-radius: 0 80px 0 0;
+	padding: 65px 25px 40px 25px;
+}
+
+.main-block-title {
+	font-family: 'Futura Heavy';
+	font-weight: 600;
+	font-size: 22px;
+	text-align: center;
+	line-height: 130%;
+	text-transform: uppercase;
+	color: #1E1E20;
+	margin-bottom: 5px;
+}
+
+.main-block-subtitle {
+	font-family: 'Futura Heavy';
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 130%;
+	text-align: center;
+	color: #1E1E20;
+	margin-bottom: 20px;
+}
+
+.main-block-img {
+	width: 327px;
+	height: 186px;
+}
+
+.main-block-input {
+	margin-bottom: 10px;
+}
+
+.checkbox {
+	margin-bottom: 31px;
+
+	&__label {
+		font-family: 'Futura Heavy';
+		font-weight: normal;
+		font-size: 12px;
+		color: #000000;
+		display: block;
+		text-align: left;
+	}
+}
+
+.button {
+	& strong {
+		display: block;
+	}
+}
+
+.btn-form {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.main-slide {}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-pagination {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
+
+.swiper-scrollbar {}

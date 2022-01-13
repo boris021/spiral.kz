@@ -27,7 +27,6 @@
 	border-radius: 10px;
 	font-family: 'Futura bold';
 	font-weight: 600;
-	// font-size: 18px;
 	color: #fff;
 	text-align: center;
 	transition: background-color 0.3s ease 0s;
@@ -175,12 +174,24 @@ textarea {
 }
 
 .input {
-	border-radius: 0 !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
+	border-radius: 7px;
+	background: rgba(30, 30, 32, 0.1);
+	border: 0.5px solid #000000;
+	box-sizing: border-box;
+	max-height: 53.58px;
+	padding: 18px 20px;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	color: #646464;
 
-	&._focus {}
+	&._focus {
+		color: #000;
+		background: rgba(183, 183, 183, 0.1);
+	}
 
 	&._error {}
 }
@@ -195,6 +206,7 @@ textarea.input {
 //<CHECK (chk+tab)>====================================================================================================
 .checkbox {
 	position: relative;
+	display: flex;
 
 	// .checkbox__input
 	&__input {
@@ -204,19 +216,58 @@ textarea.input {
 		opacity: 0;
 		visibility: hidden;
 
-		&:checked+.checkbox__text:before {
-			background: #fff url("../img/icons/check.svg") center no-repeat;
+		&:checked+.checkbox__label::after {
+			transform: scale(1);
 		}
+	}
+
+	&__label {
+		margin-top: 26px;
+		font-size: 12px;
+		line-height: 120%;
+		font-weight: 500;
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+		width: 100%;
+	}
+
+	&__label::before {
+		content: '';
+		// align-self: flex-start;
+		position: absolute;
+		display: flex;
+		flex: 0 0 24px;
+		width: 24px;
+		height: 24px;
+		border-radius: 2px;
+		border: 2px solid #CE7F54;
+	}
+
+	&__label::after {
+		transition: all 0.5s ease 0s;
+		content: '';
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background: url(../img/icons/check.svg) center center no-repeat;
+		background-color: #CE7F54;
+		border-radius: 2px;
+		border: 2px solid #CE7F54;
+		transform: scale(0);
 	}
 
 	// .checkbox__text
 	&__text {
 		display: inline-flex;
-		align-items: center;
 		position: relative;
-		font-size: 16px;
-		color: #ffffff;
-		letter-spacing: -0.3px;
+		font-family: 'Futura Book';
+		text-align: left;
+		color: #000;
+		font-weight: 500;
 		line-height: calc(20 / 16);
 		cursor: pointer;
 
@@ -235,8 +286,11 @@ textarea.input {
 	}
 
 	a {
-		color: #fff;
-		text-decoration: underline;
+		font-family: 'Futura Book';
+		font-weight: 600;
+		font-size: 13px;
+		color: #CE7F54;
+		text-decoration: none;
 
 		@media (min-width: 992px) {
 			&:hover {

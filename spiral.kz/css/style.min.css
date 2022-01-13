@@ -393,10 +393,23 @@ textarea:focus {
 }
 
 .input {
-  border-radius: 0 !important;
   width: 100%;
   display: block;
-  padding: 0px 20px;
+  border-radius: 7px;
+  background: rgba(30, 30, 32, 0.1);
+  border: 0.5px solid #000000;
+  box-sizing: border-box;
+  max-height: 53.58px;
+  padding: 18px 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  color: #646464;
+}
+.input._focus {
+  color: #000;
+  background: rgba(183, 183, 183, 0.1);
 }
 textarea.input {
   resize: none;
@@ -405,6 +418,7 @@ textarea.input {
 
 .checkbox {
   position: relative;
+  display: flex;
 }
 .checkbox__input {
   position: absolute;
@@ -413,16 +427,51 @@ textarea.input {
   opacity: 0;
   visibility: hidden;
 }
-.checkbox__input:checked + .checkbox__text:before {
-  background: #fff url("../img/icons/check.svg") center no-repeat;
+.checkbox__input:checked + .checkbox__label::after {
+  transform: scale(1);
 }
-.checkbox__text {
+.checkbox__label {
+  margin-top: 26px;
+  font-size: 12px;
+  line-height: 120%;
+  font-weight: 500;
   display: inline-flex;
   align-items: center;
   position: relative;
-  font-size: 16px;
-  color: #ffffff;
-  letter-spacing: -0.3px;
+  cursor: pointer;
+  width: 100%;
+}
+.checkbox__label::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  border: 2px solid #CE7F54;
+}
+.checkbox__label::after {
+  transition: all 0.5s ease 0s;
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: url(../img/icons/check.svg) center center no-repeat;
+  background-color: #CE7F54;
+  border-radius: 2px;
+  border: 2px solid #CE7F54;
+  transform: scale(0);
+}
+.checkbox__text {
+  display: inline-flex;
+  position: relative;
+  font-family: "Futura Book";
+  text-align: left;
+  color: #000;
+  font-weight: 500;
   line-height: 1.25;
   cursor: pointer;
 }
@@ -439,8 +488,11 @@ textarea.input {
   border: 1px solid #a7a9ac;
 }
 .checkbox a {
-  color: #fff;
-  text-decoration: underline;
+  font-family: "Futura Book";
+  font-weight: 600;
+  font-size: 13px;
+  color: #CE7F54;
+  text-decoration: none;
 }
 @media (min-width: 992px) {
   .checkbox a:hover {
@@ -906,7 +958,6 @@ body.ie ._ibg img {
 
 .header {
   position: relative;
-  padding-bottom: 1000px;
 }
 .header__img {
   position: absolute;
@@ -1160,6 +1211,7 @@ body.ie ._ibg img {
   font-size: 18px;
   font-weight: bold;
   color: #000;
+  font-family: "Futura Bold";
   white-space: nowrap;
 }
 @media (max-width: 1190px) {
@@ -1188,6 +1240,10 @@ body.ie ._ibg img {
     font-size: 14px;
     margin-top: 15px;
     margin-bottom: 28px;
+  }
+  .chart-mobile a {
+    font-weight: 600;
+    font-family: "Futura Bold";
   }
 }
 
@@ -1250,7 +1306,13 @@ body.ie ._ibg img {
     background: #FFFFFF;
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 18px;
+    padding: 13px;
+    margin-bottom: 125px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1190px) {
+  .header__nav {
+    margin-bottom: calc(40px + 85 * ((100vw - 320px) / 870));
   }
 }
 
@@ -1408,6 +1470,113 @@ body.ie ._ibg img {
   .menu__link:hover {
     color: #ededed;
   }
+}
+
+.main__body {
+  display: flex;
+}
+.main__column-left {
+  flex: 1 1 700px;
+}
+.main__column-title {
+  font-family: "Futura Bold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 51px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 22px;
+}
+.main__column-location {
+  font-family: "Futura Medium";
+  display: inline-flex;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 16px;
+  color: #3E3E3E;
+  margin-bottom: 68px;
+}
+@media (max-width: 1190px) {
+  .main__column-location {
+    margin-bottom: calc(40px + 28 * ((100vw - 320px) / 870));
+  }
+}
+.main__column-location span {
+  color: #CE7F54;
+  font-size: 22px;
+  margin-right: 10px;
+}
+.main__column-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -35px;
+  flex: 1 1 552px;
+  z-index: 1;
+}
+
+.main-block {
+  max-width: 381px;
+  background: #fff;
+  border-radius: 0 80px 0 0;
+  padding: 65px 25px 40px 25px;
+}
+
+.main-block-title {
+  font-family: "Futura Heavy";
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #1E1E20;
+  margin-bottom: 5px;
+}
+
+.main-block-subtitle {
+  font-family: "Futura Heavy";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  text-align: center;
+  color: #1E1E20;
+  margin-bottom: 20px;
+}
+
+.main-block-img {
+  width: 327px;
+  height: 186px;
+}
+
+.main-block-input {
+  margin-bottom: 10px;
+}
+
+.checkbox {
+  margin-bottom: 31px;
+}
+.checkbox__label {
+  font-family: "Futura Heavy";
+  font-weight: normal;
+  font-size: 12px;
+  color: #000000;
+  display: block;
+  text-align: left;
+}
+
+.button strong {
+  display: block;
+}
+
+.btn-form {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .page {
