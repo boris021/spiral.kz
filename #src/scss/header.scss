@@ -121,9 +121,7 @@
 		left: 29px;
 		z-index: 5;
 
-		& img {
-			max-width: 218px;
-		}
+		& img {}
 
 		@media (min-width:$md3+px) {
 			display: none;

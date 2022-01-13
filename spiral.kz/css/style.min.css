@@ -1037,9 +1037,6 @@ body.ie ._ibg img {
   left: 29px;
   z-index: 5;
 }
-.logotip__logo-mobile img {
-  max-width: 218px;
-}
 @media (min-width: 767.98px) {
   .logotip__logo-mobile {
     display: none;
