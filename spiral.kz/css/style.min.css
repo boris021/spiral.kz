@@ -1468,20 +1468,37 @@ body.ie ._ibg img {
 
 .main__body {
   display: flex;
+  flex-wrap: wrap;
   min-width: 0;
 }
 .main__column-left {
-  width: 641px;
+  flex: 1 1 641px;
+  min-width: 0;
+}
+@media (max-width: 991.98px) {
+  .main__column-left {
+    width: 100%;
+  }
 }
 .main__column-title {
   font-family: "Futura Bold";
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
-  line-height: 51px;
+  line-height: 130%;
   text-transform: uppercase;
   color: #FFFFFF;
   margin-bottom: 28px;
+}
+@media (max-width: 1190px) {
+  .main__column-title {
+    font-size: calc(28px + 12 * ((100vw - 320px) / 870));
+  }
+}
+@media (max-width: 767.98px) {
+  .main__column-title {
+    margin-top: 148px;
+  }
 }
 .main__column-location {
   font-family: "Futura Bold";
@@ -1510,7 +1527,12 @@ body.ie ._ibg img {
   justify-content: flex-end;
   margin-right: -60px;
   flex: 1 1 552px;
-  z-index: 1;
+  width: 552px;
+}
+@media (max-width: 991.98px) {
+  .main__column-right {
+    flex: 1 1 100%;
+  }
 }
 
 .block-video {
@@ -1617,10 +1639,10 @@ body.ie ._ibg img {
 }
 
 .swiper-slide {
-  display: block;
+  display: inline-block;
   object-fit: cover;
-  width: 202px;
-  height: 269px;
+  width: 202px !important;
+  height: 269px !important;
   background: #FFFFFF;
   border-radius: 0 40px 10px 10px;
   padding: 0 0 34px 0;

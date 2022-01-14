@@ -2,23 +2,32 @@
 
 	&__body {
 		display: flex;
+		flex-wrap: wrap;
 		min-width: 0;
 	}
 
 	&__column-left {
-		// flex: 1 1 641px;
-		width: 641px;
+		flex: 1 1 641px;
+		min-width: 0;
+
+		@media (max-width:$md2+px) {
+			width: 100%;
+		}
 	}
 
 	&__column-title {
 		font-family: 'Futura Bold';
 		font-style: normal;
 		font-weight: 600;
-		font-size: 40px;
-		line-height: 51px;
+		@include adaptiv-value("font-size", 40, 28, 1);
+		line-height: 130%;
 		text-transform: uppercase;
 		color: #FFFFFF;
 		margin-bottom: 28px;
+
+		@media (max-width:$md3+px) {
+			margin-top: 148px;
+		}
 	}
 
 	&__column-location {
@@ -44,9 +53,12 @@
 		display: flex;
 		justify-content: flex-end;
 		margin-right: -60px;
-		// padding-right: 35px;
 		flex: 1 1 552px;
-		z-index: 1;
+		width: 552px;
+
+		@media (max-width:$md2+px) {
+			flex: 1 1 100%;
+		}
 	}
 }
 
@@ -165,10 +177,10 @@
 }
 
 .swiper-slide {
-	display: block;
+	display: inline-block;
 	object-fit: cover;
-	width: 202px;
-	height: 269px;
+	width: 202px !important;
+	height: 269px !important;
 	background: #FFFFFF;
 	border-radius: 0 40px 10px 10px;
 	padding: 0 0 34px 0;
