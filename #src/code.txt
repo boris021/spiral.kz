@@ -1,0 +1,23 @@
+
+<div class="slider__slide">
+	<div class="slide-item">
+			<img src="img/main/main-photo-1.png" alt="main">
+	</div>
+<div class="slide-title">Собственное производство
+</div>
+</div>
+									<div class="slider__slide">
+										<div class="slide-item">
+											<img src="img/main/main-photo-2.png" alt="main">
+										</div>
+										<div class="slide-title">Бесплатный замер + 3D визуализация
+										</div>
+									</div>
+									<div class="slider__slide">
+										<div class="slide-item">
+											<img src="img/main/main-photo-3.png" alt="main">
+										</div>
+										<div class="slide-title">Поэтапная <br>оплата</div>
+									</div>
+								</div>
+
