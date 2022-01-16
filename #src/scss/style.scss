@@ -120,7 +120,7 @@ body {
 		margin-bottom: 28px;
 
 		@media (max-width:$md3+px) {
-			margin-top: 148px;
+			@include adaptiv-value("margin-top", 148, 88, 1);
 		}
 	}
 
