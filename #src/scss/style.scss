@@ -144,6 +144,7 @@ body {
 	}
 
 	&__column-right {
+		position: relative;
 		display: flex;
 		justify-content: flex-end;
 		margin-right: -60px;
@@ -159,34 +160,17 @@ body {
 }
 
 .block-video {
-	position: relative;
-	display: block;
-	margin: 0 auto;
-	max-width: 130px;
-	display: flex;
-	padding-top: 135px;
-	text-align: center;
+	flex: 0 0 129px;
+}
 
-	@media (max-width:$md1+px) {
-		// margin-top: -30px;
-		// position: absolute;
-		padding-top: -30px;
-	}
+.button-yotube {
+	position: relative;
 }
 
 .btn-youtube {
-	position: relative;
+	// position: relative;
 
-	& span {
-		font-size: 40px;
-		color: #fff;
-		z-index: 2;
-		position: absolute;
-		top: 9%;
-		margin-left: 45px;
-	}
-
-	&::before {
+	&::after {
 		position: absolute;
 		content: '';
 		top: 0;
@@ -197,7 +181,7 @@ body {
 		border-radius: 50%;
 	}
 
-	&::before {
+	&::after {
 		position: absolute;
 		content: '';
 		top: 0;
@@ -207,6 +191,17 @@ body {
 		outline: 2px solid #fff;
 		outline-offset: -7px;
 	}
+
+	& span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 40px;
+		color: #fff;
+		z-index: 2;
+	}
+
 }
 
 .video-link {

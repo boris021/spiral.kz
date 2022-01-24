@@ -1533,6 +1533,7 @@ body.ie ._ibg img {
   margin-right: 10px;
 }
 .main__column-right {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   margin-right: -60px;
@@ -1547,32 +1548,14 @@ body.ie ._ibg img {
 }
 
 .block-video {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  max-width: 130px;
-  display: flex;
-  padding-top: 135px;
-  text-align: center;
-}
-@media (max-width: 1202px) {
-  .block-video {
-    padding-top: -30px;
-  }
+  flex: 0 0 129px;
 }
 
-.btn-youtube {
+.button-yotube {
   position: relative;
 }
-.btn-youtube span {
-  font-size: 40px;
-  color: #fff;
-  z-index: 2;
-  position: absolute;
-  top: 9%;
-  margin-left: 45px;
-}
-.btn-youtube::before {
+
+.btn-youtube::after {
   position: absolute;
   content: "";
   top: 0;
@@ -1582,7 +1565,7 @@ body.ie ._ibg img {
   background-color: #ce7f54;
   border-radius: 50%;
 }
-.btn-youtube::before {
+.btn-youtube::after {
   position: absolute;
   content: "";
   top: 0;
@@ -1591,6 +1574,15 @@ body.ie ._ibg img {
   height: 120px;
   outline: 2px solid #fff;
   outline-offset: -7px;
+}
+.btn-youtube span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  color: #fff;
+  z-index: 2;
 }
 
 .video-link {
