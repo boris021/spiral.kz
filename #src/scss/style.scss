@@ -148,10 +148,12 @@ body {
 		justify-content: flex-end;
 		margin-right: -60px;
 		flex: 1 1 552px;
-		width: 552px;
+		// width: 552px;
 
-		@media (max-width:$md2+px) {
+		@media (max-width:$md1+px) {
 			flex: 1 1 100%;
+			margin-right: 0;
+			justify-content: center;
 		}
 	}
 }
@@ -164,6 +166,12 @@ body {
 	display: flex;
 	padding-top: 135px;
 	text-align: center;
+
+	@media (max-width:$md1+px) {
+		// margin-top: -30px;
+		// position: absolute;
+		padding-top: -30px;
+	}
 }
 
 .btn-youtube {
@@ -264,6 +272,14 @@ body {
 	font-weight: 400;
 }
 
+
+@media (min-width: 768px) {
+	.main__hand-list {
+		display: none;
+		margin-left: 30px;
+	}
+}
+
 //========================================================================================================================================================
 .swslider__container {
 	@media (max-width:$md2+px) {
@@ -273,7 +289,6 @@ body {
 
 .swiper {
 	width: 100%;
-	overflow: visible !important;
 }
 
 .swiper-slide {
@@ -320,7 +335,7 @@ body {
 }
 
 .swiper-button-prev {
-	left: -15px !important;
+	// left: -15px !important;
 }
 
 .swiper-button-next,
